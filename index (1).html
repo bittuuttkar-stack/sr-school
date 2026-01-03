@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SR School - Tadkal | Shaping Future Leaders</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #003366;
+            --accent-gold: #ffcc00;
+            --text-dark: #333;
+            --light-bg: #f9f9f9;
+        }
+
+        body { font-family: 'Roboto', sans-serif; margin: 0; padding: 0; scroll-behavior: smooth; color: var(--text-dark); }
+
+        /* Navigation Bar */
+        header {
+            background: var(--primary-blue);
+            color: white;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        .logo-area { display: flex; align-items: center; gap: 15px; }
+        .logo-img { height: 50px; width: 50px; border-radius: 50%; border: 2px solid var(--accent-gold); }
+        .logo-text h1 { margin: 0; font-size: 22px; letter-spacing: 1px; }
+        .logo-text span { font-size: 12px; color: var(--accent-gold); }
+        
+        nav a { color: white; text-decoration: none; margin-left: 20px; font-weight: 500; transition: 0.3s; }
+        nav a:hover { color: var(--accent-gold); }
+
+        /* Hero / Elevation Section */
+        .hero { 
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1541339907198-e08756dee81c?auto=format&fit=crop&w=1350&q=80');
+            height: 500px; background-size: cover; background-position: center; 
+            display: flex; flex-direction: column; justify-content: center; align-items: center; 
+            color: white; text-align: center; padding: 0 20px;
+        }
+        .hero h2 { font-size: 45px; margin-bottom: 10px; }
+        .hero p { font-size: 20px; max-width: 700px; }
+
+        /* Facilities Grid */
+        .section { padding: 60px 10%; text-align: center; }
+        .section-title { color: var(--primary-blue); margin-bottom: 40px; position: relative; }
+        .section-title::after { content: ''; width: 60px; height: 3px; background: var(--accent-gold); position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); }
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 25px; }
+        .card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-bottom: 4px solid var(--primary-blue); }
+        .card h3 { color: var(--primary-blue); margin-bottom: 10px; }
+
+        /* Video Section */
+        .video-section { background: var(--primary-blue); color: white; padding: 60px 10%; text-align: center; }
+        .video-box { max-width: 850px; margin: 30px auto; border: 10px solid rgba(255,255,255,0.1); border-radius: 15px; overflow: hidden; }
+
+        /* About & Admission Row */
+        .content-row { display: flex; flex-wrap: wrap; gap: 40px; padding: 60px 10%; align-items: flex-start; }
+        .info-col { flex: 1; min-width: 350px; }
+        .form-col { flex: 1; min-width: 350px; background: var(--light-bg); padding: 35px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+
+        .form-col h3 { text-align: center; color: var(--primary-blue); margin-bottom: 25px; }
+        input, select, textarea { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 8px; font-size: 15px; }
+        .btn-submit { background: #e67e22; color: white; border: none; padding: 15px; width: 100%; font-size: 18px; font-weight: bold; cursor: pointer; border-radius: 8px; transition: 0.3s; }
+        .btn-submit:hover { background: #d35400; }
+
+        /* Google Map Section */
+        .map-section { padding: 40px 10%; background: #fff; }
+        .map-container { width: 100%; height: 350px; border: 4px solid #eee; border-radius: 10px; }
+
+        /* Footer */
+        footer { background: #111; color: #ccc; text-align: center; padding: 40px 10%; border-top: 5px solid var(--accent-gold); }
+        footer b { color: white; }
+
+        @media (max-width: 768px) {
+            .hero h2 { font-size: 30px; }
+            header { flex-direction: column; text-align: center; }
+            nav { margin-top: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-area">
+            <img src="https://via.placeholder.com/100?text=SR" alt="SR Logo" class="logo-img">
+            <div class="logo-text">
+                <h1>SR SCHOOL</h1>
+                <span>TADKAL, SANGAREDDY</span>
+            </div>
+        </div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#facilities">Facilities</a>
+            <a href="#admission">Admission</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h2>Better Education for a Brighter Future</h2>
+        <p>తడ్కల్ గ్రామంలో విద్యార్థుల ప్రతిభను వెలికితీసే విద్యా సంస్థ. ఉత్తమ ఫలితాలకు క్రమశిక్షణే పునాది.</p>
+    </section>
+
+    <section class="section" id="facilities">
+        <h2 class="section-title">మా ప్రత్యేకతలు (Our Facilities)</h2>
+        <div class="grid">
+            <div class="card"><h3>🚌 Transport</h3><p>సురక్షితమైన బస్సు సదుపాయం.</p></div>
+            <div class="card"><h3>💻 Computer Lab</h3><p>ఆధునిక డిజిటల్ తరగతులు.</p></div>
+            <div class="card"><h3>⚽ Playground</h3><p>విశాలమైన ఆట స్థలం.</p></div>
+            <div class="card"><h3>🔬 Science Lab</h3><p>ప్రయోగాత్మక విద్య.</p></div>
+        </div>
+    </section>
+
+    <section class="video-section">
+        <h2>Explore Our Campus</h2>
+        <p>మా పాఠశాల వాతావరణాన్ని ఈ వీడియోలో వీక్షించండి.</p>
+        <div class="video-box">
+            <iframe width="100%" height="450" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <section class="content-row" id="about">
+        <div class="info-col">
+            <h2 style="color: var(--primary-blue);">SR స్కూల్ గురించి...</h2>
+            <p>మా పాఠశాల గత దశాబ్ద కాలంగా తడ్కల్ మరియు చుట్టుపక్కల గ్రామాల్లో నాణ్యమైన విద్యను అందిస్తోంది. అనుభవజ్ఞులైన ఉపాధ్యాయులు, ఆధునిక బోధనా పద్ధతులు మా ప్రత్యేకత.</p>
+            <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=600&q=80" alt="Students" style="width: 100%; border-radius: 10px; margin-top: 20px;">
+        </div>
+
+        <div class="form-col" id="admission">
+            <h3>Online Admission Request</h3>
+            <form action="#">
+                <input type="text" placeholder="Student Name" required>
+                <select required>
+                    <option value="">Select Class</option>
+                    <option>Pre-Primary (LKG/UKG)</option>
+                    <option>Primary (1st to 5th)</option>
+                    <option>Secondary (6th to 10th)</option>
+                </select>
+                <input type="tel" placeholder="Parent Mobile Number" required>
+                <textarea rows="3" placeholder="Village / Full Address"></textarea>
+                <button type="submit" class="btn-submit">Submit Application</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="map-section" id="contact">
+        <h2 style="text-align: center; color: var(--primary-blue);">మా చిరునామా (Find Us)</h2>
+        <p style="text-align: center;">📍 SR School, Main Road, Tadkal, Sangareddy Dist.</p>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15206.123456789!2d77.89!3d17.90!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDU0JzAwLjAiTiA3N8KwNTMnMDAuMCJF!5e0!3m2!1sen!2sin!4v123456789" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <footer>
+        <p>📞 Contact: <b>+91 99XXXXXX88</b> | 📧 Email: <b>info@srschooltadkal.com</b></p>
+        <p>© 2026 SR School - Tadkal. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
